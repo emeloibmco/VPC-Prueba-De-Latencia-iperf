@@ -2,7 +2,7 @@
 <br />
 
 ## Índice  📰
-1. [Pre-Requisitos](#Pre-Requisitos-pencil)
+1. [Pre-Requisitos](#Pre-Requisitos-bookmark_tabs)
 2. [Tabla sobre latencia de red](#Tabla-sobre-latencia-de-red-clipboard)
 3. [Crear VPC con subred y VSI en Dallas y Londres](#Crear-VPC-con-subred-y-VSI-en-Dallas-y-Londres-cloud)
 4. [Configurar archivos y acceder a VSI Dallas y VSI Londres](#Configurar-archivos-y-acceder-a-VSI-Dallas-y-VSI-Londres-card_file_box-computer)
@@ -13,7 +13,7 @@
 9. [Autores](#Autores-black_nib)
 <br />
 
-## Pre-Requisitos :pencil:
+## Pre-Requisitos :bookmark_tabs:
 <br />
 
 ## Tabla sobre latencia de red :clipboard: 
