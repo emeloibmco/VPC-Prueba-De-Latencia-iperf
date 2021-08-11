@@ -158,6 +158,6 @@ Una vez ejecute el comando va a obtener como respuesta una serie de medidas, ent
 <br />
 
 ## Autores :black_nib:
-<br />
+Equipo *IBM Cloud Tech Sales Colombia*.
 
 
