@@ -38,7 +38,7 @@ Para realizar el test, en primero lugar debe implementar:
 <br />
 
 * Una *VPC* en Dallas y una *VPC* en Londres. Tomar como guía el paso <a href="https://github.com/emeloibmco/VPC-Despliegue-VSI-Acceso-SSH/blob/main/README.md#Crear-VPC-cloud">Crear  VPC</a>.
-* Una subred en cada *VPC* (Dallas y Londres). Tomar como guía el paso <a href="https://github.com/emeloibmco/VPC-Despliegue-VSI-Acceso-SSH/blob/main/README.md#Desplegar-VSI-en-VPC-computer">Crear subred</a>.
+* Una subred en cada *VPC* (Dallas y Londres). Tomar como guía el paso <a href="https://github.com/emeloibmco/VPC-Despliegue-VSI-Acceso-SSH#Crear-subred-wrench">Crear subred</a>.
 * Una *VSI* con SO CentOS en Dallas.
 <br />
 
