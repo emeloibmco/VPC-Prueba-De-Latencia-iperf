@@ -24,17 +24,22 @@ Para este ejercicio se implementan 2 VSI ubicadas en Dallas y Londres y posterio
 
 ## Tabla sobre latencia de red :clipboard: 
 *IBM Cloud* cuenta con la herramienta <a href="http://lg.softlayer.com/">lg.softlayer.com</a>, que permite visualizar datos sobre latencia de red entre servidores en distintas ubicaciones. En la siguiente imagen se presenta la tabla que contiene los datos. 
+
 <br />
 <p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Prueba-De-Latencia-iperf/blob/main/Imagenes/latency.png"></p>
-<br />
+
+
 Para este caso, si se analizan los servidores en ubicaciones como Dallas y Londres se obtiene que la latencia de red tiene un valor de ```108 ms```. Es importante aclarar que los datos presentados en la tabla son estáticos y no una representación en tiempo real.
 <br />
 
 ## Crear VPC con subred y VSI en Dallas y Londres :cloud:
 Para realizar el test, en primero lugar debe implementar:
+<br />
+
 * Una *VPC* en Dallas y una *VPC* en Londres. Tomar como guía el paso <a href="https://github.com/emeloibmco/VPC-Despliegue-VSI-Acceso-SSH/blob/main/README.md#Crear-VPC-cloud">Crear  VPC</a>.
 * Una subred en cada *VPC* (Dallas y Londres). Tomar como guía el paso <a href="https://github.com/emeloibmco/VPC-Despliegue-VSI-Acceso-SSH/blob/main/README.md#Desplegar-VSI-en-VPC-computer">Crear subred</a>.
 * Una *VSI* con SO CentOS en Dallas.
+* <br />
 
 <p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Prueba-De-Latencia-iperf/blob/main/Imagenes/vsi_dallas.gif"></p>
 <br />
@@ -55,11 +60,13 @@ Como se comento en <a href="https://github.com/emeloibmco/VPC-Despliegue-VSI-Acc
 yum install nano
 ```
 Los demás comandos se aplican de la misma forma que en la máquina Ubuntu.
-
+<br />
 
 <p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Prueba-De-Latencia-iperf/blob/main/Imagenes/configssh.gif"></p>
+<br />
 
 Una vez se realice la configuración podrá conectarse por medio de *SSH* únicamente ingresando el ```password``` configurado.
+<br />
 
 <p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Prueba-De-Latencia-iperf/blob/main/Imagenes/ingreso.PNG"></p>
 <br />
@@ -76,19 +83,76 @@ Para instalar ```iperf3``` en las VSI *CentOS*, ejecute:
 yum update
 dnf install iperf3
 ```
+<br />
 
 <p align="center"><img width="1000" src="https://github.com/emeloibmco/VPC-Prueba-De-Latencia-iperf/blob/main/Imagenes/iperf.PNG"></p>
 
 Una vez termine de instalar, podrá utilizar el comando ```iperf3``` en las *VSI*.
+
 <br />
 
 ## Configurar reglas en VSI :hammer_and_wrench:
+Antes de realizar la prueba de funcionamiento para medir el ancho de banda entre un cliente y un servidor *TCP*, debe configurar las reglas de entrada en el grupo de seguridad de la *VPC* cuya *VSI* funcionará como servidor (para este caso se configura en la *VPC* Londres). Para ello realice:
+
+<br />
+
+1.	En ```Infraestructura VPC/VPC Infrastructure``` ubique la sección ```Red/Net``` y de click en la opción ```Grupos de seguridad/Security groups```.
+<br />
+
+2.	Seleccione la región en donde se encuentra la *VPC* y visualice el grupo se seguridad. El nombre que aparece se crea de forma automática.
+<br />
+
+3.	De click sobre el grupo de seguridad y seleccione la pestaña ```Reglas/Rules```.
+<br />
+
+4.	Posteriormente, de click en el botón ```Crear``` ➡ seleccione el protocolo ```TPC``` y en el rango de puertos coloque el puerto ```5201``` que corresponde al puerto de escucha del servidor (definido por defecto con ```iperf3```).  Cuando la configuración esté lista de click en el botón ```Guardar```.
+<br />
+
+5.	Espero unos segundos mientras se implementa la regla y verifique que se encuentre correctamente.
+<br />
+
+<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Prueba-De-Latencia-iperf/blob/main/Imagenes/Configurar%20Reglas.gif"></p>
+<br />
+
+> NOTA: puede realizar la configuración de las reglas en ambas *VSI*, en caso de que desee realizar la prueba intercambiando los roles de servidor y de cliente.
 <br />
 
 ## Realizar test de latencia con iperf3 :chart_with_downwards_trend: :memo:
+El último paso consiste en realizar la prueba para medir el ancho de banda entre ambos servidores. Para ello, realice lo siguiente:
+<br />
+
+1.	Determine cual *VSI* funcionará como servidor y cual funcionará como cliente. Para este caso de ejemplo se considera:
+
+* ```VSI 1 – Londres```: servidor.
+* ```VSI 2 – Dallas```: cliente.
+<br />
+
+2.	Acceda a cada una de las *VSI* con la respectiva IP flotante y contraseña. 
+<br />
+
+3.	En la *VSI* que funcionará como servidor (en este caso la *VSI* 1) coloque el comando:
+```
+iperf3 -s
+```
+<br />
+
+4.	En la *VSI* que funcionará como cliente (en este caso la *VSI* 2) coloque el comando:
+```
+iperf3 -c <ip_servidor>
+```
+<br />
+
+Una vez ejecute el comando va a obtener como respuesta una serie de medidas, entre ellas la velocidad de transmisión en Mbits/sec.
+
+<br />
+
+<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Prueba-De-Latencia-iperf/blob/main/Imagenes/TestFinalIperf.gif"></p>
 <br />
 
 ## Referencias :mag:
+* <a href="http://lg.softlayer.com/">SoftLayer IP Backbone - Latencia de red</a>.
+* <a href="https://www.ibm.com/docs/es/elm/7.0.1?topic=architecture-testing-cloud-data-center-latency">Prueba de latencia del centro de datos de IBM Cloud</a>.
+* <a href="https://www.ibm.com/support/pages/how-do-you-determine-traffic-rate-your-hosts-can-manage">How do you determine the traffic rate that your hosts can manage?</a>.
 <br />
 
 ## Autores :black_nib:
