@@ -25,26 +25,23 @@ Para este ejercicio se implementan 2 VSI ubicadas en Dallas y Londres y posterio
 ## Tabla sobre latencia de red :clipboard: 
 *IBM Cloud* cuenta con la herramienta <a href="http://lg.softlayer.com/">lg.softlayer.com</a>, que permite visualizar datos sobre latencia de red entre servidores en distintas ubicaciones. En la siguiente imagen se presenta la tabla que contiene los datos. 
 <br />
-<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Despliegue-VSI-Acceso-SSH/blob/main/Imagenes/latency.png"></p>
+<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Prueba-De-Latencia-iperf/blob/main/Imagenes/latency.png"></p>
 <br />
 Para este caso, si se analizan los servidores en ubicaciones como Dallas y Londres se obtiene que la latencia de red tiene un valor de ```108 ms```. Es importante aclarar que los datos presentados en la tabla son estáticos y no una representación en tiempo real.
 <br />
 
 ## Crear VPC con subred y VSI en Dallas y Londres :cloud:
-https://github.com/emeloibmco/VPC-Despliegue-VSI-Acceso-SSH/blob/main/README.md#Crear-VPC-cloud
-https://github.com/emeloibmco/VPC-Despliegue-VSI-Acceso-SSH/blob/main/README.md#Desplegar-VSI-en-VPC-computer
-https://github.com/emeloibmco/VPC-Despliegue-VSI-Acceso-SSH/blob/main/README.md#Configurar-claves-SSH-closed_lock_with_key
 Para realizar el test, en primero lugar debe implementar:
 * Una *VPC* en Dallas y una *VPC* en Londres. Tomar como guía el paso <a href="https://github.com/emeloibmco/VPC-Despliegue-VSI-Acceso-SSH/blob/main/README.md#Crear-VPC-cloud">Crear  VPC</a>.
 * Una subred en cada *VPC* (Dallas y Londres). Tomar como guía el paso <a href="https://github.com/emeloibmco/VPC-Despliegue-VSI-Acceso-SSH/blob/main/README.md#Desplegar-VSI-en-VPC-computer">Crear subred</a>.
 * Una *VSI* con SO CentOS en Dallas.
 
-<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Despliegue-VSI-Acceso-SSH/blob/main/Imagenes/vsi_dallas.gif"></p>
+<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Prueba-De-Latencia-iperf/blob/main/Imagenes/vsi_dallas.gif"></p>
 <br />
 
 * Una *VSI* con SO CentOS en Londres. 
 
-<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Despliegue-VSI-Acceso-SSH/blob/main/Imagenes/Crear%20VSI%20Londres.gif"></p>
+<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Prueba-De-Latencia-iperf/blob/main/Imagenes/Crear%20VSI%20Londres.gif"></p>
 <br />
 
 
@@ -60,11 +57,11 @@ yum install nano
 Los demás comandos se aplican de la misma forma que en la máquina Ubuntu.
 
 
-<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Despliegue-VSI-Acceso-SSH/blob/main/Imagenes/configssh.gif"></p>
+<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Prueba-De-Latencia-iperf/blob/main/Imagenes/configssh.gif"></p>
 
 Una vez se realice la configuración podrá conectarse por medio de *SSH* únicamente ingresando el ```password``` configurado.
 
-<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Despliegue-VSI-Acceso-SSH/blob/main/Imagenes/ingreso.PNG"></p>
+<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Prueba-De-Latencia-iperf/blob/main/Imagenes/ingreso.PNG"></p>
 <br />
 
 ## Instalar comando iperf3 en cada VSI :inbox_tray:
@@ -80,7 +77,7 @@ yum update
 dnf install iperf3
 ```
 
-<p align="center"><img width="1000" src="https://github.com/emeloibmco/VPC-Despliegue-VSI-Acceso-SSH/blob/main/Imagenes/iperf.PNG"></p>
+<p align="center"><img width="1000" src="https://github.com/emeloibmco/VPC-Prueba-De-Latencia-iperf/blob/main/Imagenes/iperf.PNG"></p>
 
 Una vez termine de instalar, podrá utilizar el comando ```iperf3``` en las *VSI*.
 <br />
