@@ -24,12 +24,13 @@ Para este ejercicio se implementan 2 VSI ubicadas en Dallas y Londres y posterio
 
 ## Tabla sobre latencia de red :clipboard: 
 *IBM Cloud* cuenta con la herramienta <a href="http://lg.softlayer.com/">lg.softlayer.com</a>, que permite visualizar datos sobre latencia de red entre servidores en distintas ubicaciones. En la siguiente imagen se presenta la tabla que contiene los datos. 
-
 <br />
-<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Prueba-De-Latencia-iperf/blob/main/Imagenes/latency.png"></p>
 
+<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Prueba-De-Latencia-iperf/blob/main/Imagenes/latency.png"></p>
+<br />
 
 Para este caso, si se analizan los servidores en ubicaciones como Dallas y Londres se obtiene que la latencia de red tiene un valor de ```108 ms```. Es importante aclarar que los datos presentados en la tabla son estáticos y no una representación en tiempo real.
+
 <br />
 
 ## Crear VPC con subred y VSI en Dallas y Londres :cloud:
