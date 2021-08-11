@@ -4,7 +4,7 @@
 ## Índice  📰
 1. [Pre-Requisitos](#Pre-Requisitos-pencil)
 2. [Tabla sobre latencia de red](#Tabla-sobre-latencia-de-red)
-3. [Crear VPC, subred y VSI en Dallas y Londres](#Crear-VPC-,-subred-y-VSI-en-Dallas-y-Londres)
+3. [Crear VPC con subred y VSI en Dallas y Londres](#Crear-VPC-con-subred-y-VSI-en-Dallas-y-Londres)
 4. [Configurar archivos y acceder a VSI Dallas y VSI Londres](#Configurar-archivos-y-acceder-a-VSI-Dallas-y-VSI-Londres)
 5. [Instalar comando iperf3 en cada VSI](#Instalar-comando-iperf3-en-cada-VSI)
 6. [Configurar reglas en VSI](#Configurar-reglas-en-VSI)
@@ -19,7 +19,7 @@
 ## Tabla sobre latencia de red
 <br />
 
-## Crear VPC, subred y VSI en Dallas y Londres
+## Crear VPC con subred y VSI en Dallas y Londres
 <br />
 
 ## Configurar archivos y acceder a VSI Dallas y VSI Londres
