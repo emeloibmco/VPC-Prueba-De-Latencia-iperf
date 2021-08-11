@@ -52,6 +52,7 @@ Para realizar el test, en primero lugar debe implementar:
 
 
 Recuerde el paso sobre como <a href="https://github.com/emeloibmco/VPC-Despliegue-VSI-Acceso-SSH/blob/main/README.md#Configurar-claves-SSH-closed_lock_with_key">Configurar claves SSH</a> de forma previa para crear sus instancias. 
+
 <br />
 
 ## Configurar archivos y acceder a VSI Dallas y VSI Londres :card_file_box: :computer:
