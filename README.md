@@ -120,7 +120,7 @@ Antes de realizar la prueba de funcionamiento para medir el ancho de banda entre
 <br />
 
 ## Realizar test de latencia con iperf3 :chart_with_downwards_trend: :memo:
-El último paso consiste en realizar la prueba para medir el ancho de banda entre ambos servidores. Para ello, realice lo siguiente:
+El último paso consiste en realizar la prueba para medir la velocidad de transmisión entre ambos servidores. Para ello, realice lo siguiente:
 <br />
 
 1.	Determine cual *VSI* funcionará como servidor y cual funcionará como cliente. Para este caso de ejemplo se considera:
