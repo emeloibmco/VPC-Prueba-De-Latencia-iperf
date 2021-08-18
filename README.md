@@ -101,7 +101,7 @@ Antes de realizar la prueba de funcionamiento para medir el ancho de banda entre
 1.	En ```Infraestructura VPC/VPC Infrastructure``` ubique la sección ```Red/Net``` y de click en la opción ```Grupos de seguridad/Security groups```.
 <br />
 
-2.	Seleccione la región en donde se encuentra la *VPC* y visualice el grupo se seguridad. El nombre que aparece se crea de forma automática.
+2.	Seleccione la región en donde se encuentra la *VPC* y visualice el grupo de seguridad. El nombre que aparece se crea de forma automática.
 <br />
 
 3.	De click sobre el grupo de seguridad y seleccione la pestaña ```Reglas/Rules```.
