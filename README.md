@@ -75,7 +75,7 @@ Una vez se realice la configuración podrá conectarse por medio de *SSH* única
 
 ## Instalar comando iperf3 en cada VSI :inbox_tray:
 
-Actualmente hay dos ramas independientes de ```iPerf``` que se desarrollan en paralelo: ```iPerf2``` y ```iPerf3```. La funcionalidad de estas herramientas es en su mayoría compatible, pero utilizan diferentes puertos de red de forma predeterminada. En ```iPerf1/2``` es 5001, en ```iPerf3``` es 5201.
+Actualmente hay dos ramas independientes de ```iPerf``` que se desarrollan en paralelo: ```iPerf2``` e ```iPerf3```. La funcionalidad de estas herramientas es en su mayoría compatible, pero utilizan diferentes puertos de red de forma predeterminada. En ```iPerf1/2``` es 5001, en ```iPerf3``` es 5201.
 
 Las diferencias no son tan significativas, por lo que no es necesario utilizar una versión específica de ```iPerf```, en este ejercicio usaremos ```iperf3```.
 
