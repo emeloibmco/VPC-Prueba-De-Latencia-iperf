@@ -34,7 +34,7 @@ Para este caso, si se analizan los servidores en ubicaciones como Dallas y Londr
 <br />
 
 ## Crear VPC con subred y VSI en Dallas y Londres :cloud:
-Para realizar el test, en primero lugar debe implementar:
+Para realizar el test, en primer lugar debe implementar:
 <br />
 
 * Una *VPC* en Dallas y una *VPC* en Londres. Tomar como guía el paso <a href="https://github.com/emeloibmco/VPC-Despliegue-VSI-Acceso-SSH/blob/main/README.md#Crear-VPC-cloud">Crear  VPC</a>.
