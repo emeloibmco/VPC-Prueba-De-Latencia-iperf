@@ -5,6 +5,10 @@ Para este ejercicio se implementan 2 VSI ubicadas en Dallas y Londres y posterio
 
 <br />
 
+<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Prueba-De-Latencia-iperf/blob/main/Imagenes/ArquitecturaIperf.png"></p>
+<br />
+
+
 ## Índice  📰
 1. [Pre-Requisitos](#Pre-Requisitos-bookmark_tabs)
 2. [Tabla sobre latencia de red](#Tabla-sobre-latencia-de-red-clipboard)
