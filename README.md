@@ -1,7 +1,7 @@
 # VPC - Prueba de Latencia con iperf ☁💻📈
 El termino *latencia* corresponde al tiempo que se tarda la transmisión de información a través de una red. Por otro lado, el *ancho de banda* corresponde a la cantidad de datos que se pueden transmitir por segundo (medido en este caso en Mbits/sec). Para realizar esta medición se utiliza el comando ```iperf```, que es una herramienta de la línea de comandos usada en el diagnóstico de problemas de velocidad de red. Este comando mide la capacidad máxima de procesamiento de red que puede manejar un servidor. Es particularmente útil cuando se experimentan problemas de velocidad en la red, debido a que se puede utilizar para determinar cuál servidor es incapaz de llegar al rendimiento máximo. 
 
-Para este ejercicio se implementan 2 VSI ubicadas en Dallas y Londres y posteriormente se realiza la respectiva prueba para medir el ancho de banda entre ambos servidores mediante el comando ```iperf```, tal y como se presenta en los siguientes pasos.
+Para este ejercicio se implementan 2 VSI ubicadas en Dallas y Londres y posteriormente se realiza la respectiva prueba para medir el ancho de banda entre ambos servidores mediante el comando ```iperf```.
 
 <br />
 
